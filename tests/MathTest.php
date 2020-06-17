@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 use PHPUnit\Framework\TestCase;
 
-final class MathTest extends TestCase
+class MathTest extends TestCase
 {
 
-    public function test_sum(): void
+    public function testSum(): void
     {
         $math = new Math();
         $result = $math->sum(1,2,3,4,5,6,7,8,9,10);
@@ -12,6 +12,28 @@ final class MathTest extends TestCase
             55,
             $result
         );
+    }
+
+    public function testNull(): void
+    {
+        $this->assertSame(
+            55,
+            "55",
+            "not same"
+        );   
+    }
+
+
+    public function testCheckNumberOwnTestExcept(): void
+    {
+        $this->expectException(LogicException::class);
+        $obj = new Math();
+        $obj->isOne(2);
+    }
+
+    public function testFail(): void
+    {
+        $this->fail('Not yet implemented');
     }
 
 }
