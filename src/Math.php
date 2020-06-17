@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
-final class Math
+class Math
 {
     public function sum(int ...$args): int
     {
@@ -10,4 +10,13 @@ final class Math
 
         return $sum;
     }
+
+    public function isOne(int $number):bool
+    {
+        if ($number !== 1) {
+            throw new LogicException('Invalid Param : ' . $number);
+        }
+        return true;
+    }
+
 }
