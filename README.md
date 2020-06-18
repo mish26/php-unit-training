@@ -12,7 +12,11 @@ php composer.phar install
 ## PHPUnit実行方法
 
 ```
+# testsディレクトリ配下の、すべてのテストを実行する
 ./vendor/bin/phpunit tests
+
+# testsディレクトリ配下の、特定のテストクラスのみ実行する
+./vendor/bin/phpunit tests/EmailTest.php
 ```
 
 ## その他
