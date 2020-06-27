@@ -5,4 +5,9 @@ class SomeClass
     { 
         return rand(1,100);
     }
+
+    public function date(): DateTime
+    { 
+        return new DateTime();
+    }
 }

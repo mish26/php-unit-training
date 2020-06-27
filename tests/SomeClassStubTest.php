@@ -16,4 +16,5 @@ class SomeClassStubTest extends TestCase
         // 'foo' を返すようになります
         $this->assertSame(15, $stub->doSomething());
     }
+
 }
